@@ -1,6 +1,9 @@
-fastapi==0.111.0
-uvicorn==0.29.0
-python-dotenv==1.0.1
-twilio==8.11.0
-google-generativeai==0.7.0
-pydantic==2.7.1
+fastapi>=0.111.0
+uvicorn>=0.29.0
+python-dotenv>=1.0.1
+twilio>=8.11.0
+google-generativeai>=0.7.0
+pydantic>=2.7.1
+# Fix for Python 3.14: protobuf 4.x crashes with "Metaclasses with custom tp_new are not supported"
+# Use protobuf 5.28.3 if you are on Python 3.14 (pip install "protobuf==5.28.3")
+protobuf==5.28.3; python_version >= "3.14"
